@@ -24,7 +24,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
-    "stylus": "^0.54.5",
+    "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-cube-ui": "^0.2.5",
     "vue-template-compiler": "^2.6.10"
