@@ -1,15 +1,18 @@
+const path = require('path');
 const appData = require('./data.json');
 
 const { seller, goods, ratings } = appData;
+
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
 
 module.exports = {
   css: {
     loaderOptions: {
       stylus: {
         'resolve url': true,
-        'import': [
-          './src/theme'
-        ]
+        import: ['./src/theme']
       }
     }
   },
@@ -42,5 +45,10 @@ module.exports = {
         });
       });
     }
+  },
+  chainWebpack(config) {
+    config.resolve.alias
+      .set('components', resolve('src/components'))
+      .set('common', resolve('src/common'));
   }
 };
